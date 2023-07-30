@@ -1,0 +1,42 @@
+
+BankingScott :: Example using the space separated format.                     
+==============================================================================
+My Test :: http://RoyalBankScotland                                   | FAIL |
+Invalid log level 'Account_Jhn_'.
+------------------------------------------------------------------------------
+Another Test                                                          | PASS |
+------------------------------------------------------------------------------
+BankingScott :: Example using the space separated format.             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+
+<suite id="s1" name="BankingScott" source="/home/victoralonsogarcia8/BankingScott.test">
+<test id="s1-t1" name="My Test" line="8">
+<kw name="Log" library="BuiltIn">
+<arg>${MESSAGE}</arg>
+<arg>Account_Jhn_</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230730 17:44:39.894" level="FAIL">Invalid log level 'Account_Jhn_'.</msg>
+<status status="FAIL" starttime="20230730 17:44:39.892" endtime="20230730 17:44:39.894"/>
+</kw>
+<kw name="My Keyword">
+<arg>/home/victoralonsogarcia8</arg>
+<status status="NOT RUN" starttime="20230730 17:44:39.895" endtime="20230730 17:44:39.895"/>
+</kw>
+<doc>http://RoyalBankScotland</doc>
+<status status="FAIL" starttime="20230730 17:44:39.890" endtime="20230730 17:44:39.896">Invalid log level 'Account_Jhn_'.</status>
+</test>
+<test id="s1-t2" name="Another Test" line="13">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${MESSAGE}</arg>
+<arg>Transfer number E123RTZXARCASUIASCI</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230730 17:44:39.900" endtime="20230730 17:44:39.901"/>
+</kw>
+<status status="PASS" starttime="20230730 17:44:39.898" endtime="20230730 17:44:39.902"/>
+</test>
+<doc>Example using the space separated format.</doc>
+<status status="FAIL" starttime="20230730 17:44:39.821" endtime="20230730 17:44:39.904"/>
+</suite>
+<statistics>
+<total>
