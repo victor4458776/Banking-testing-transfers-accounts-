@@ -1,0 +1,20 @@
+Robot Framework creates the top-level test suite automatically, 
+and the specified files and directories become its child test suites. 
+The name of the created test suite is got from child suite names by concatenating them together with an ampersand (&) and spaces. 
+For example, the name of the top-level suite in the first example below is My Tests & Your Tests. These automatically created names 
+are often quite long and complicated. In most cases, it is thus better to use the --name option for overriding it, 
+as in the second example below:
+
+robot my_tests.robot your_tests.robot
+robot --name Example path/to/tests/pattern_*.robot
+Starting from Robot Framework 6.1, it is also possible to define a test suite initialisation file for the automatically created top-level suite. The path to the init file is given similarly to the test case files:
+
+robot __init__.robot my_tests.robot other_tests.robot
+3.1.2   Using command line options
+Robot Framework provides a number of command line options that can be used to control how test cases are executed and what outputs are generated. This section explains the option syntax, and what options actually exist. How they can be used is discussed elsewhere in this chapter.
+
+Using options
+When options are used, they must always be given between the runner script and the data sources. For example:
+
+robot -L debug my_tests.robot
+robot --include smoke --variable HOST:10.0.0.42 path/to/tests/
