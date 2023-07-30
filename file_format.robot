@@ -1,3 +1,9 @@
+rebot output.xml
+rebot path/to/output_file.xml
+rebot --include smoke --name Smoke_Tests c:\results\output.xml
+rebot output1.xml output2.xml
+rebot outputs/*.xml
+
 *** Settings ***
 Documentation     Example using the space separated format.
 Library           Android 3.1
