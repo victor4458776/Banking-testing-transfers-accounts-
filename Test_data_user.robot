@@ -1,4 +1,5 @@
 #TEST1
+#RUN TESTS FOR BANKING DATA IN LINUX
 | *** Settings ***   |
 | Documentation      | Example using the pipe separated format.
 | Library            | OperatingSystem
@@ -8,14 +9,15 @@
 
 | *** Test Cases *** |                 |               |
 | My Test            | [Documentation] | Example test. |
-|                    | Log             | ${MESSAGE}    | 10000$
+|                    | Log             | ${MESSAGE}    | 
 |                    | My Keyword      | ${CURDIR}     |
-| Another Test       | Should Be Equal | ${MESSAGE}    | Balance-Account
+| Another Test       | Should Be Equal | ${MESSAGE}    | Account-Balance
 
 | *** Keywords ***   |                        |         |
-| My Keyword         | [Arguments]            | ${path} | /../../../
-|                    | Directory Should Exist | ${path} |
+| My Keyword         | [Arguments]            | ${path} | 
+|                    | Directory Should Exist | ${path} | /home/account
 
+#RUN TESTS SEPARATELY
 ********************************************************************************************************* 
 #TEST2
 
