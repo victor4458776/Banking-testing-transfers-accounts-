@@ -19,3 +19,31 @@ Short documentation in multiple lines
     ...                The body is separated from the short doc with
     ...                an empty line.
     No Operation
+
+*******************************************************************************
+*** Keywords ***
+Any Number Of Arguments
+    [Arguments]    @{varargs}
+    Log Many    @{varargs}
+
+One Or More Arguments
+    [Arguments]    ${required}    @{rest}
+    Log Many    ${required}    @{rest}
+
+Required, Default, Varargs
+    [Arguments]    ${req}    ${opt}=42    @{others}
+    Log    Required: ${req}
+    Log    Optional: ${opt}
+    Log    Others:
+    FOR    ${item}    IN    @{others}
+        Log    ${item}
+    END
+
+*** Variables ***
+${DATE}    2011-06-27
+
+*** Test Cases ***
+Example
+    Deadline is ${DATE}
+    ${1} + ${2} = ${3}
+
