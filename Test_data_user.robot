@@ -42,3 +42,23 @@ Do Something
     [Arguments]    ${args}
     Some Keyword    ${arg}
     Another Keyword
+
+#TESTS OUTPUT
+PYTHONPATH:
+  /home/victoralonsogarcia8/.local/bin
+  /usr/lib/python39.zip
+  /usr/lib/python3.9
+  /usr/lib/python3.9/lib-dynload
+  /home/victoralonsogarcia8/.local/lib/python3.9/site-packages
+  /usr/local/lib/python3.9/dist-packages
+  /usr/lib/python3/dist-packages
+==============================================================================
+Tasks :: API reference                                                        
+==============================================================================
+Process invoice                                                       | FAIL |
+Parent suite setup failed:
+No keyword with name '$$$$' found.
+------------------------------------------------------------------------------
+Tasks :: API reference                                                | FAIL |
+Suite setup failed:
+No keyword with name '$$$$' found.
